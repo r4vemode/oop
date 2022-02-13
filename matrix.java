@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Matrix +");
         firstMatrix.sumWithNewMatrix(secondMatrix.getMatrix());
         System.out.println("Matrix * n"); // где n = число
-        firstMatrix.mullToEta(10);
+        firstMatrix.multiply(10);
         firstMatrix.displayMatrix();
 
         System.out.println("Matrix * Matrix");
@@ -84,10 +84,10 @@ class Matrix {
         displayMatrix(result);
     }
 
-    void mullToEta(int eta) {
+    void multiply(int asd) {
         for (int i = 0; i < this.rows; i++) {
             for (int j = 0; j < this.columns; j++) {
-                this.M[i][j] *= eta;
+                this.M[i][j] *= asd;
             }
         }
     }
@@ -96,7 +96,7 @@ class Matrix {
         return this.M;
     }
 
-    static public double[][] mullMatrix(double[][] A, double[][] B) {
+    static public double[][] multiplyMatrix(double[][] A, double[][] B) {
         if (A[0].length != B.length) {
             throw new IllegalArgumentException(
                     "Нельзя умножить матрицы! Начальная матрица: " + A[0].length + "x" + A.length +
