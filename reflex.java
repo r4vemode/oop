@@ -41,7 +41,8 @@ public class Main {
                             Field.setAccessible(true);
                             System.out.println(field.getInt(someClass));
                             field.setInt(someClass, 5);
-                            System.out.println(field.getInt(someClass));
+                            System.out.println(field.getInt(someClass)); 
+                        }
                           
 class SomeClass {
 private int i;
